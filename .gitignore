@@ -1,0 +1,16 @@
+data/253-134-S
+data/689-640-S
+data/731-679-N
+data/732-680-N
+data/733-681-N
+data/735-683-N
+node_modules
+tmp/
+examples/*.json
+examples/*--detections
+examples/*--detections.jpeg
+examples/*--matches
+matches/
+__pycache__
+.ipynb_checkpoints
+notebooks/.png

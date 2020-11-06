@@ -1,0 +1,58 @@
+.
+├── [1.0K]  LICENSE
+├── [9.9K]  README.md
+├── [ 160]  code
+│   ├── [3.6K]  README.md
+│   ├── [ 224]  cctview
+│   │   ├── [   0]  __init__.py
+│   │   ├── [4.3K]  detect.py
+│   │   ├── [8.3K]  extract.py
+│   │   ├── [8.3K]  match.py
+│   │   └── [ 15K]  utils.py
+│   └── [1.4K]  example.py
+├── [ 288]  data
+│   ├── [8.6M]  253-134-S.zip
+│   ├── [ 20M]  689-640-S.zip
+│   ├── [ 43M]  731-679-N.zip
+│   ├── [ 51M]  732-680-N.zip
+│   ├── [8.1M]  733-681-N.zip
+│   ├── [ 22M]  735-683-N.zip
+│   └── [818K]  tree.txt
+├── [ 324]  environment.yml
+├── [ 288]  examples
+│   ├── [ 18K]  253-134-S--2020-05-05--13.10.24--original.jpeg
+│   ├── [ 20K]  689-640-S--2020-05-05--13.11.15--original.jpeg
+│   ├── [ 21K]  731-679-N--2020-05-05--13.36.56--original.jpeg
+│   ├── [ 19K]  732-680-N--2020-05-05--13.36.52--original.jpeg
+│   ├── [ 19K]  733-681-N--2020-05-05--13.34.29--original.jpeg
+│   └── [ 14K]  735-683-N--2020-05-05--13.34.46--original.jpeg
+├── [ 128]  models
+│   ├── [ 74M]  VeRI_densenet_ft50.pth
+│   └── [146M]  resnet50_coco_best_v2.0.1.h5
+├── [  96]  notebooks
+│   └── [230K]  Working\ With\ Sample\ Data.ipynb
+├── [ 512]  previews
+│   ├── [383K]  all-things-open-intro.jpg
+│   ├── [ 28M]  cctview-app.gif
+│   ├── [ 37M]  cctview-intro.gif
+│   ├── [3.8M]  code-detect-extract-match.png
+│   ├── [920K]  code-detect.png
+│   ├── [265K]  code-extract.png
+│   ├── [416K]  code-match.png
+│   ├── [437K]  csvconf-intro.png
+│   ├── [388K]  densenet.png
+│   ├── [8.6K]  distance-formula.png
+│   ├── [622K]  examples-detect-extract-match.png
+│   ├── [419K]  notebooks.png
+│   ├── [ 87K]  resnet.jpg
+│   └── [1.4M]  resnet.png
+├── [ 320]  sample
+│   ├──         ...
+|   |
+|   |           (48 directories, 83 files)
+│   │           
+│   ├── [5.1K]  sample--detections.csv
+│   └── [ 12K]  tree.txt
+└── [   0]  tree.txt
+
+56 directories, 124 files

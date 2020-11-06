@@ -1,0 +1,8 @@
+models/resnet50_coco_best_v2.0.1.h5 filter=lfs diff=lfs merge=lfs -text
+models/VeRI_densenet_ft50.pth filter=lfs diff=lfs merge=lfs -text
+data/253-134-S.zip filter=lfs diff=lfs merge=lfs -text
+data/689-640-S.zip filter=lfs diff=lfs merge=lfs -text
+data/731-679-N.zip filter=lfs diff=lfs merge=lfs -text
+data/732-680-N.zip filter=lfs diff=lfs merge=lfs -text
+data/733-681-N.zip filter=lfs diff=lfs merge=lfs -text
+data/735-683-N.zip filter=lfs diff=lfs merge=lfs -text

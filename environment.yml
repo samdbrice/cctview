@@ -1,0 +1,18 @@
+name: cctview
+channels:
+  - defaults
+dependencies:
+  - python=3.5.4
+  - opencv=3.3.1
+  - python.app=2
+  - pandas=0.22.0
+  - pip:
+    - imageai==2.1.5
+    - keras==2.3.1
+    - numpy==1.18.4
+    - pillow==7.2.0
+    - tensorboard==1.14.0
+    - tensorflow==1.14.0
+    - torch==1.5.1
+    - torchvision==0.6.1
+    - jupyter==1.0.0
