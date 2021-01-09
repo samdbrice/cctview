@@ -1,4 +1,4 @@
-# Demystifying Clearview
+# Demystifying Clearview AI
 ### Vehicle Tracking with Public CCTV and Deep Learning
 
 <p align="center">
@@ -9,13 +9,13 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Demo](https://img.shields.io/badge/demo-cctview.herokuapp.com-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://cctview.herokuapp.com/)
 
-*[Demystifying Clearview](http://samdbrice.com/)* is a multi-part blog series based on the namesake [csv,conf,v5](https://csvconf.com/) talk. The purpose of the presentation was to demonstrate some of the technologies behind [Clearview AI](https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html) and, most importantly, discuss such technologies’ privacy implications. If you’re primarily interested in the higher-level privacy implications, feel free to jump to [Part 8](http://samdbrice.com/) of the series at any time. I’d recommend carefully reading the sections starting at *[Warning: ReID Data is Personal Data.](http://samdbrice.com/)*
+*[Demystifying Clearview AI](https://samdbrice.medium.com/fri-nov-6-2020-ae15374138b1)* is a multi-part blog series based on the namesake [csv,conf,v5](https://csvconf.com/) lightning talk. The purpose of the presentation was to demonstrate some of the technologies behind [Clearview AI](https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html) and, most importantly, discuss such technologies’ privacy implications. If you’re primarily interested in the higher-level privacy implications, feel free to jump to [Part 8](https://medium.com/@samdbrice/40fce44d3b0b) of the series at any time. I’d recommend carefully reading the sections starting at *[Warning: ReID Data is Personal Data.](https://medium.com/@samdbrice/40fce44d3b0b)*
 
-Many news outlets were covering Clearview’s threat to privacy and the questionable ethics behind its methods. Still, no coverage presented the underlying technology in a very digestible way. The talk aims to fill that gap and, in the process, explore some possible defenses to the privacy problems engendered by Clearview.
+Many news outlets were covering Clearview’s threat to privacy and the questionable ethics behind its methods. Still, no coverage presented the underlying technology in a very digestible way. This series aims to fill that gap and, in the process, explore some possible defenses to the privacy problems engendered by Clearview.
 
 This repository contains fully functional demos of models, code, and other data referenced in the series.
 
-Many thanks to the csv,conf,v5 Program Committee for accepting this talk, and to the csv,conf,v5 participants for being such a receptive and engaging audience.
+Many thanks to the csv,conf,v5 Program Committee for accepting the talk, and to the csv,conf,v5 participants for being such a receptive and engaging audience.
 
 <p align="center">
   <a href="https://twitter.com/lilscientista/status/1261045564281667584">
@@ -23,15 +23,21 @@ Many thanks to the csv,conf,v5 Program Committee for accepting this talk, and to
   </a>
 </p>
 
-<!--
-**Note:** This talk was also subsequently accepted to [All Things Open 2020](https://2020.allthingsopen.org/)!
+**Note:** This talk was subsequently accepted to [All Things Open](https://2020.allthingsopen.org/) - the largest open technology event on the eastern seaboard!
 
 <p align="center">
-  <a href="https://2020.allthingsopen.org/">
-    <img height="225px" src="previews/all-things-open-intro.jpg" />
+  <img height="250px" src="previews/all-things-open-intro.jpg" />
+</p>
+
+For 2020 ATO went virtual, transmitting world-class open source TED-style talks and workshops to 10,000+ devices worldwide.
+
+You can check out a [recording of the talk](https://medium.com/@samdbrice/980b955b1c8c) on the All Things Open YouTube channel.
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=oYXp29Upm-U">
+    <img height="300px" src="previews/ato-talk.gif" />
   </a>
 </p>
--->
 
 # Table of Contents
 
@@ -53,20 +59,24 @@ create a new Conda environment based on the included ``environment.yml``.
 
 **Requirements**:
 - [``git``](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Git LFS](https://git-lfs.github.com/)
 - [``conda``](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 
 ```
-git clone https://github.com/samdbrice/cctview.git
+git lfs install && git clone https://github.com/samdbrice/cctview.git
 cd cctview
 conda env create -n cctview -f environment.yml
 conda activate cctview
 ```
 
+**Note:** Git Large File Storage (LFS) is required to download the ``models`` state
+files and the large ``data`` files.
+
 ## Examples
 
 After installing and activating the included environment you can run the ``code/example.py`` script with ``pythonw``.
 
-**Note**: ``pythonw`` will automaticaly be on your path. It's a wrapper for the ``python``
+**Note**: ``pythonw`` will automatically be on your path. It's a wrapper for the ``python``
 command designed to get [``matplotlib`` working correctly on OSX](https://matplotlib.org/faq/osx_framework.html).
 
 ```
@@ -105,7 +115,7 @@ From within Jupyter navigate to the ``notebooks`` directory then open the
 
 ## Code
 
-Code and other snippets discussed in the talk can be found within the ``code`` directory. 
+Code and other snippets discussed in the series can be found within the ``code`` directory. 
 The package ``cctview`` is divided into three primary modules
 - [``cctview.detect``](./code/#detect) - Object detection model.
 - [``cctview.extract``](./code/#extract) - VeRI feature extraction model.
@@ -147,7 +157,7 @@ the ``DenseNet201`` architecture, tuned using the [VeRI dataset](https://github.
 The module [``cctview.extract``](./code/#extract) demonstrates using PyTorch to load the DenseNet model
 and extract the VeRI features data to file. 
 
-Based on code from the [Track-to-Track ReID method](https://github.com/GeoTrouvetout/Vehicle_ReID) referenced in the talk.
+Based on code from the [Track-to-Track ReID method](https://github.com/GeoTrouvetout/Vehicle_ReID) referenced in the series.
 
 <p align="center">
   <a href="https://arxiv.org/abs/1608.06993">
@@ -220,22 +230,10 @@ cctview
 │   ├── [ 74M]  VeRI_densenet_ft50.pth
 │   └── [146M]  resnet50_coco_best_v2.0.1.h5
 ├── [  96]  notebooks
-│   └── [230K]  Working\ With\ Sample\ Data.ipynb
+│   └── [230K]  "Working With Sample Data.ipynb"
 ├── [ 512]  previews
-│   ├── [383K]  all-things-open-intro.jpg
-│   ├── [ 28M]  cctview-app.gif
-│   ├── [ 37M]  cctview-intro.gif
-│   ├── [3.8M]  code-detect-extract-match.png
-│   ├── [920K]  code-detect.png
-│   ├── [265K]  code-extract.png
-│   ├── [416K]  code-match.png
-│   ├── [437K]  csvconf-intro.png
-│   ├── [388K]  densenet.png
-│   ├── [8.6K]  distance-formula.png
-│   ├── [622K]  examples-detect-extract-match.png
-│   ├── [419K]  notebooks.png
-│   ├── [ 87K]  resnet.jpg
-│   └── [1.4M]  resnet.png
+|   |           ...
+│   └──   
 ├── [ 320]  sample
 │   ├──         ...
 |   |

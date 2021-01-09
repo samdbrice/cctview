@@ -7,7 +7,7 @@ track the movement of a vehicle along a stretch of road.
   <img src="../previews/code-detect-extract-match.png">
 </p>
 
-Code and other snippets discussed in the talk can be found within this directory. 
+Code and other snippets discussed in the series can be found within this directory. 
 
 The package ``cctview`` is divided into three primary modules
 - [``cctview.detect``](./#detect) - Object detection model.
@@ -48,7 +48,7 @@ will generate:
 Features from the detected objects (generated output #3 above) are extracted using the second-to-last layer of a 
 [DenseNet](https://arxiv.org/abs/1608.06993) CNN. PyTorch is used to load weights from ``models/VeRI_densenet_ft50.pth``
 based on a ``Densenet201`` architecture, tuned using the [VeRI dataset](https://github.com/VehicleReId/VeRidataset).
-Based on code from the [Track-to-Track ReID method](https://github.com/GeoTrouvetout/Vehicle_ReID) referenced in the talk.
+Based on code from the [Track-to-Track ReID method](https://github.com/GeoTrouvetout/Vehicle_ReID) referenced in the series.
 
 <p align="center">
   <img height="250px" src="../previews/code-extract.png">

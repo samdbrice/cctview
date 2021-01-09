@@ -6,6 +6,7 @@ dependencies:
   - opencv=3.3.1
   - python.app=2
   - pandas=0.22.0
+  - pip=10.0.1
   - pip:
     - imageai==2.1.5
     - keras==2.3.1
@@ -15,4 +16,4 @@ dependencies:
     - tensorflow==1.14.0
     - torch==1.5.1
     - torchvision==0.6.1
-    - jupyter==1.0.0
+    - notebook==6.1.6
